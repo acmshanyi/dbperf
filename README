@@ -1,0 +1,31 @@
+This kit runs in a jupyter notebook container. It is meant to be a all-in-one DB perf tooling kit.
+
+It has the following features:
+
+1. Generate BenchCraft Workload automatically or manually
+2. Generate perf analysis of BenchCraft report
+3. Retrieve Server-Side metrics and generate perf analysis
+
+To run the container:
+
+1. Install docker service on your machine
+   https://docs.docker.com/install/
+
+
+2. Run the following command to download and start the container
+   docker run -d -p 8888:8888 shayi/dbperf
+
+3. Log into the hosted jupyter notebook service
+
+   http://localhost:8888
+
+   If prompt for a code, do the following
+   a. docker ps
+   b. docker exec -ti {container id} /bin/bash
+   c. jupyter notebook list
+      code is the part after 'token=' and before ' '
+
+4. Open DB_Perf_Kit notebook
+
+
+5. Start Analyzing

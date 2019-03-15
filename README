@@ -29,3 +29,5 @@ To run the container:
 
 
 5. Start Analyzing
+
+Note that, for MySQL workload, please use the plugin in /src not the default one installed

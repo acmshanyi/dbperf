@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- BenchCraft Profile Document -->
+<!-- Last written: 2019-03-05T23:43:33 -->
+<Profile Version="1.0" xmlns="http://www.microsoft.com/BenchCraft/XML">
+  <Plugin DllName="CDB_MySQL.bdll" GUID="A7749E7D-AADF-4B5A-801A-36EFC5F7CC27" />
+  <!-- ============== -->
+  <!-- Driver Engines -->
+  <!-- ============== -->
+  <DriverEngines>
+    <DriverEngine Name="CDB-MySQL" GUID="B3DDFA41-23D0-4BE2-A362-86AFBDE22A48" Server="" Description="" DirectoryPath="C:\benchcraft\Logs" StartRate="100000" ConnectRate="100000" Selected="true" PromptAtStartup="false" AffinitySetting="">
+      <Display Headless="false" Minimized="false" TopPos="300" LeftPos="500" FontSize="8 x 12" />
+    </DriverEngine>
+  </DriverEngines>
+  <!-- ============== -->
+  <!-- Thread Groups  -->
+  <!-- ============== -->
+  <ThreadGroups>
+    <ThreadGroup Name="TG-CDB-MySQL" Driver="CDB-MySQL" Description="" ThreadGroupType="TGT-1" MaxNumberOfThreads="100000" InitialNumberOfThreads="5" ParameterSet="Standard_Mix_1-1">
+      <Parameter Name="ODBCDriver" Value="MySQL" />
+      <Parameter Name="Server" Value="" />
+      <Parameter Name="User" Value="" />
+      <Parameter Name="Password" Value="" />
+      <Parameter Name="DBName" Value="" />
+      <Parameter Name="ScaleFactor" Value="2500" />
+    </ThreadGroup>
+  </ThreadGroups>
+  <!-- ============== -->
+  <!-- Parameter Sets -->
+  <!-- ============== -->
+  <ParameterSets>
+    <ParameterSet Name="Standard_Mix_1-1" Description="The original transaction mix defined for the CDB workload." ParameterSetType="PST-1">
+      <Parameter Name="PacingMultiplier" Value="1.0" />
+      <Parameter Name="MaxErrors" Value="10" />
+      <Parameter Name="MaxConnectErrors" Value="10" />
+      <Parameter Name="Read_Lite_Weight" Value="35" />
+      <Parameter Name="Read_Medium_Weight" Value="20" />
+      <Parameter Name="Read_Heavy_Weight" Value="5" />
+      <Parameter Name="Update_Lite_Weight" Value="20" />
+      <Parameter Name="Update_Heavy_Weight" Value="3" />
+      <Parameter Name="Insert_Lite_Weight" Value="3" />
+      <Parameter Name="Insert_Heavy_Weight" Value="2" />
+      <Parameter Name="Delete_Weight" Value="2" />
+      <Parameter Name="CPU_Heavy_Weight" Value="10" />
+    </ParameterSet>
+  </ParameterSets>
+</Profile>
